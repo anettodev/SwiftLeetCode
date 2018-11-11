@@ -33,7 +33,7 @@ func palindromePairs(arr: [String]) -> [[Int]]{
     var result: [[Int]] = Array()
     for (i,word1) in arr.enumerated(){
         for (j,word2) in arr.enumerated() {
-            if i != j {
+            if i != j { // Avoid to sum the same element
                 let strSum = word1 + word2
                 if strSum.isPalindrome() {
                     result.append([i,j])
